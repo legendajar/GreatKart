@@ -1,0 +1,13 @@
+{% autoescape off %}
+
+Hi {{user.first_name}},
+
+Please use this link to verify your account:
+http://{{domain}}{% url 'activate' uidb64=uid token=token %}
+
+If you think it's not you, please ignore this email. Your data will be kept safe and won't be shared with anyone.If you don't get an email within the next 10 minutes, please check your spam folder.
+
+Thanks
+The GreatKart Team
+
+{% endautoescape%}
